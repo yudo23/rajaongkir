@@ -130,7 +130,7 @@ class RajaOngkirController extends Controller
         curl_close($curl);
 
         if ($err) {
-          echo "cURL Error #:" . $err;
+          echo $err;
         } else {
           echo $response;
         }
