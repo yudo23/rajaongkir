@@ -144,7 +144,7 @@
         if(val == ""){
           let option_kelurahan = '<option value="" selected>--Pilih kota terlebih dahulu--</option>';
           $('.wilayah-kelurahan').html('');
-          $('.select-kelurahan').html(option_kelurahan);
+          $('.select-kecamatan').html(option_kelurahan);
         }
         else{
           load_kecamatan(val);
@@ -183,7 +183,7 @@
               })
 
               $('#tbody').html(html);
-              $('.wilayah').html(" Ditemukan "+resp.data.length+' wilayah rajapi')  
+              $('.wilayah').html(" Ditemukan "+resp.data.length+' wilayah rajaapi')  
             }
             else{
               alert(resp.data);
@@ -343,7 +343,7 @@
               })
 
               $('#tbody-kelurahan').html(html);
-              $('.wilayah-kelurahan').html(" Ditemukan "+resp.data.length+' kelurahan rajapi')  
+              $('.wilayah-kelurahan').html(" Ditemukan "+resp.data.length+' kelurahan rajaapi')  
             }
             else{
               alert(resp.data);
