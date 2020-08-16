@@ -17,7 +17,13 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/','RajaOngkirController@index');
+Route::get('/','RajaApiController@index');
 
-Route::get('/rajaongkir/wilayah','RajaOngkirController@wilayah');
-Route::get('/rajaongkir/kota','RajaOngkirController@kota');
+// Route::get('/rajaongkir/wilayah','RajaOngkirController@wilayah');
+// Route::get('/rajaongkir/kota','RajaOngkirController@kota');
+
+
+Route::get('/rajaapi/provinsi','RajaApiController@rajaapi_get_provinsi');
+Route::get('/rajaapi/kota','RajaApiController@rajaapi_get_kota');
+Route::get('/rajaapi/kecamatan','RajaApiController@rajaapi_get_kecamatan');
+Route::get('/rajaapi/kelurahan','RajaApiController@rajaapi_get_kelurahan');

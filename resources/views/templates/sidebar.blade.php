@@ -18,7 +18,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{{url('/')}}" >
               <i class="ni ni-tv-2 text-primary"></i>
-              <span class="nav-link-text">Raja Ongkir</span>
+              <span class="nav-link-text">Raja Api</span>
             </a>
           </li>
         </ul>
