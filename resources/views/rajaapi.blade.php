@@ -128,6 +128,7 @@
 
       $(document).on('change','.select-wilayah',function(){
         let val = $(this).val();
+        $('#tbody-kelurahan').find('tr').remove();
         if(val == ""){
           let option_kota = '<option value="" selected>--Pilih provinsi terlebih dahulu--</option>';
           let option_kecamatan = '<option value="" selected>--Pilih kota/kab terlebih dahulu--</option>';
@@ -136,10 +137,13 @@
           $('.select-kecamatan').html(option_kecamatan);
         }
         else{
+          let option_kecamatan = '<option value="" selected>--Pilih kota/kab terlebih dahulu--</option>';
+          $('.select-kecamatan').html(option_kecamatan);
           load_kota(val);
         }
       })
       $(document).on('change','.select-kota',function(){
+        $('#tbody-kelurahan').find('tr').remove();
         let val = $(this).val();
         if(val == ""){
           let option_kelurahan = '<option value="" selected>--Pilih kota terlebih dahulu--</option>';
@@ -151,6 +155,7 @@
         }
       })
       $(document).on('change','.select-kecamatan',function(){
+        $('#tbody-kelurahan').find('tr').remove();
         let val = $(this).val();
         if(val == ""){
           let html = '<tr><td colspan="2" class="text-center">Pilih kecamatan terlebih dahulu</td></tr>';
@@ -255,7 +260,7 @@
 
             console.log(resp);
             if(resp.code == 200){
-              let html = '<option value="" selected>--Pilih kota--</option>';
+              let html = '<option value="" selected>--Pilih kota/kabupaten--</option>';
               $.each(resp.data,function(index,element){
                 html += '<option value="'+element["id"]+'">'+element["name"]+'</option>';
               })
@@ -295,7 +300,7 @@
             console.log(resp);
             if(resp.code == 200){
               let html = "";
-              html = '<option selected>--Pilih kecamatan--</option>';
+              html = '<option selected value="">--Pilih kecamatan--</option>';
               $.each(resp.data,function(index,element){
                 html += '<option value="'+element["id"]+'">'+element["name"]+'</option>';
               })

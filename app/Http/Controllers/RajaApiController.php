@@ -13,7 +13,7 @@ class RajaApiController extends Controller
      */
     public function index()
     {
-        return view('rajaongkir');
+        return view('rajaapi');
     }
 
     /**
